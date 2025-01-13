@@ -1,4 +1,6 @@
 
+import { ownedPokemon } from "./ownedPokemon";
+
 export interface party {
     id?: string;
     name: string;
@@ -10,11 +12,11 @@ export interface party {
     poke_5: string;
     poke_6: string;
     /*
-    poke_1: pokemon;
-    poke_2: pokemon;
-    poke_3: pokemon;
-    poke_4: pokemon;
-    poke_5: pokemon;
-    poke_6: pokemon;
+    poke_1: ownedPokemon;
+    poke_2: ownedPokemon;
+    poke_3: ownedPokemon;
+    poke_4: ownedPokemon;
+    poke_5: ownedPokemon;
+    poke_6: ownedPokemon;
     */
 }

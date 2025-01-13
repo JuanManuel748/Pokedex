@@ -18,7 +18,6 @@ export interface pokemon {
 
 export interface ownedPokemon {
     id?: number;
-    name: string;
     nametag: string;
     abilitie: string;
     move_1: string;

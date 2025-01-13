@@ -28,8 +28,4 @@ export class PartyListComponent implements OnInit {
   deleteParty(id: string): void {
     this.partyService.deleteParty(id);
   }
-
-  updateParty(id: string): void {
-    this.router.navigate(['/edit', id]);
-  }
 }
