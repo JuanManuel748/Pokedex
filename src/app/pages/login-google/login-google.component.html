@@ -1,0 +1,9 @@
+<div class="container text-center mt-4">
+    <div class="pt-5">
+      <h2 class="">Iniciar Sesión</h2>
+      <button class="btn btn-success" (click)="loginWithGoogle()">
+        <i class="bi bi-google me-2"></i> Iniciar Sesión con Google
+      </button>
+      <app-notification *ngIf="errorMessage" [alertClass]="'danger'" [alertMessage]="errorMessage" />
+    </div>
+  </div>

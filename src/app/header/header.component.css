@@ -1,0 +1,107 @@
+a{
+    text-decoration: none;
+}
+
+header{
+    height: 80px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 20px;
+    background-color: #245afb;
+    user-select: none; 
+}
+hr {
+    border: none;
+    height: 2px;
+    background-color: #000000;
+    margin: 0;
+}
+
+ 
+#loginContainer {
+    display: flex;
+    align-items: center;
+    background-color: #30408d; /* Dark blue background */
+    border-radius: 50px;
+    padding: 0 20px;
+    height: 50px;
+    border: solid 3px #30408d;
+}
+
+#loginContainer img {
+    height: 40px;
+    margin-right: 10px;
+}
+
+#loginContainer a, #loginContainer button {
+    display: flex;
+    align-items: center;
+    color: #ffffff; /* White text color */
+    text-decoration: none;
+    font-family: 'Arial', sans-serif; /* Updated font */
+    font-size: 1.2rem; /* Adjusted font size */
+    font-weight: bold;
+    background: none;
+    border: none;
+    cursor: pointer;
+}
+
+#loginContainer span {
+    color: #8ca9ff;
+}
+#loginContainer strong{
+    color: #abc0ff;
+}
+
+#loginContainer button i {
+    margin-right: 5px;
+}
+
+#titleContainer{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0 5px;
+    background-color: #88daf2;
+    width: 300px;
+    border-radius: 50px;
+    height: 50px;
+    color: #f0fbff;
+    border: solid 3px #30408d;
+    img{
+        height: 40px;
+        width: 40px;
+        margin: 0 5px;
+    }
+    h1{
+        font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+        font-size: 2.5rem;
+       -webkit-text-stroke: 1px #30607a; 
+    }
+}
+#partyContainer {
+    display: flex;
+    align-items: center;
+    background-color: #D30A40;
+    border-radius: 50px;
+    padding: 0 20px;
+    height: 50px;
+    border: solid 3px #000000;
+}
+#partyContainer img {
+    height: 40px;
+}
+#partyContainer p{
+    padding: 0 10px 0 10px;
+}
+
+#partyContainer a {
+    display: flex;
+    align-items: center;
+    color: #ffffff;
+    text-decoration: none;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    font-size: 1.8rem;
+    font-weight: bold;
+}

@@ -1,0 +1,11 @@
+{
+  "hosting": {
+    "public": "public",
+    "site": "pokedex-2-angular",
+    "ignore": [
+      "firebase.json",
+      "**/.*",
+      "**/node_modules/**"
+    ]
+  }
+}

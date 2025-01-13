@@ -1,0 +1,65 @@
+html, body {
+    height: 100%;
+    margin: 0;
+  }
+  
+  .error-container {
+    text-align: center;
+    min-height: 100vh; /* Asegura que el contenedor cubra toda la altura de la ventana */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background: repeating-linear-gradient(
+      0deg,
+      #79a0e3 0px,
+      #79a0e3 10px,
+      #668cd7 10px,
+      #668cd7 50px,
+      #79a0e3 50px,
+      #79a0e3 60px,
+      #5576c5 60px,
+      #5576c5 90px,
+      #79a0e3 90px,
+      #79a0e3 100px,
+      #4c69b8 100px,
+      #4c69b8 140px,
+      #79a0e3 140px,
+      #79a0e3 150px,
+      #4660b4 150px,
+      #4660b4 160px,
+      #79a0e3 160px,
+      #79a0e3 170px,
+      #5576c5 170px,
+      #5576c5 190px
+    );
+  }
+  
+  .error-container h1 {
+    font-size: 3em;
+    color: #ff0000;
+  }
+  
+  .error-container p {
+    font-size: 1.5em;
+  }
+  
+  .error-container a {
+    display: inline-block;
+    margin-top: 20px;
+    padding: 10px 20px;
+    background-color: #007bff;
+    color: #fff;
+    text-decoration: none;
+    border-radius: 5px;
+  }
+  
+  .error-container a:hover {
+    background-color: #0056b3;
+  }
+  
+  .error-container img.error-image {
+    margin-top: 20px;
+    max-width: 100%;
+    height: auto;
+  }

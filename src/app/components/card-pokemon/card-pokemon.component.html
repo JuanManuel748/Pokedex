@@ -1,0 +1,19 @@
+<div id="container" [ngClass]="{selected: selected}">
+  <img
+    id="arrow"
+    src="../../../assets/img/flecha.png"
+    alt="arrow"
+    *ngIf="selected"
+  />
+  <div id="card" (click)="clicked.emit(idPk)" ngClass="{selected: selected}">
+    <div id="circle"></div>
+    <img
+      src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/{{
+        idPk
+      }}.png"
+      alt="pokemon"
+    />
+    <span>Nº {{ idPk }}</span>
+    <span *ngIf="data">{{ data.name | titlecase }}</span>
+  </div>
+</div>

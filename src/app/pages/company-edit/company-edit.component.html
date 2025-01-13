@@ -1,0 +1,49 @@
+<section class="container mt-4">
+    <h2 class="">Editar empresa</h2>
+    <app-notification *ngIf="showAlert" [alertClass]="alertClass" [alertMessage]="alertMessage"/>
+    <form (submit)="updateCompany()">
+      <div class="form-group mb-4">
+        <label for="name">Nombre</label>
+        <input
+          class="form-control"
+          id="name"
+          name="name"
+          type="text"
+          [(ngModel)]="company.name"
+        />
+      </div>
+      <div class="form-group mb-4">
+        <label for="address">Dirección</label>
+        <input
+          class="form-control"
+          id="address"
+          name="address"
+          type="text"
+          [(ngModel)]="company.address"
+        />
+      </div>
+      <div class="form-group mb-4">
+        <label for="phone">Teléfono</label>
+        <input
+          class="form-control"
+          id="phone"
+          name="phone"
+          type="text"
+          [(ngModel)]="company.phone"
+        />
+      </div>
+      <div class="form-group mb-4">
+        <label for="email">Email</label>
+        <input
+          class="form-control"
+          id="email"
+          name="email"
+          type="email"
+          [(ngModel)]="company.email"
+        />
+      </div>
+      <div class="d-grid gap-2 d-md-block">
+        <button type="submit" class="btn btn-primary mt-3 "><i class="bi bi-pencil"></i> Editar</button>
+      </div>
+    </form>
+  </section>

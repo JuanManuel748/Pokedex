@@ -1,0 +1,221 @@
+#container{
+    display: grid;
+    grid-template-columns: 1fr 60px;
+}
+
+#data{
+    height: 600px;
+    width: 90vw;
+    background-color: #fceab8;
+    display: grid;
+    align-items: center;
+    grid-template-rows: 1fr 3fr 3fr;
+    -webkit-box-shadow: 0px 2px 5px 0px rgba(0,0,0,0.2);
+    -moz-box-shadow: 0px 2px 5px 0px rgba(0,0,0,0.2);
+    box-shadow: 0px 2px 5px 0px rgba(0,0,0,0.2);
+}
+
+.area:first-child {
+    flex-grow: 1;
+    background-color: #bfc3ce;
+    background-image: linear-gradient(45deg, #c3c5c4 25%, transparent 25%, transparent 75%, #c3c5c4 75%, #c3c5c4),
+        linear-gradient(-45deg, #c3c5c4 25%, transparent 25%, transparent 75%, #c3c5c4 75%, #c3c5c4);
+    background-size: 20px 20px;
+}
+
+.area {
+    height: 100%;
+    padding-left: 60%;
+    padding-right: 100px;
+    background-color: #d3ecf6;
+    background-image: linear-gradient(45deg, #c4e8f8 25%, transparent 25%, transparent 75%, #c4e8f8 75%, #c4e8f8),
+    linear-gradient(-45deg, #c4e8f8 25%, transparent 25%, transparent 75%, #c4e8f8 75%, #c4e8f8);
+    background-size: 20px 20px;
+    font-size: larger;
+}
+
+.area:last-child {
+    background: repeating-linear-gradient(0deg, #cce486, #cce486 2px, #bfd678 2px, #bfd678 4px);
+}
+
+
+
+#descriptionContainer {
+    height: 70%;
+    margin-top: 30px;
+    background-color: #f8f7db;
+    display: grid;
+    grid-template-columns: 20px 1fr 20px;
+    border-radius: 10px;
+}
+
+#descriptionContainer div {
+    background-color: #daeac4;
+    margin-top: 10px;
+    height: 90%;
+    margin: 5px;
+}
+
+#descriptionContainer div:first-child {
+    border-radius: 0 8px 8px 0;
+}
+
+#descriptionContainer div:last-child {
+    border-radius: 8px 0 0 8px;
+}
+
+.tag {
+    display: inline-block;
+    background-color: #67bcea;
+    margin-right: 20px;
+    border-radius: 5px;
+    color: white;
+    padding: 5px 10px;
+    margin: 10px auto;
+    font-size: x-large;
+    width: auto;
+    text-align: center;
+}
+
+.area p {
+    text-align: left; /* Alinea el texto a la izquierda */
+    margin-left: 20px; /* Mueve los párrafos ligeramente hacia la izquierda */
+    margin-bottom: 20px; /* Añade separación entre los párrafos */
+    margin: 20px 20px;
+}  
+
+button{
+    background-color: #fceab8;
+    border-radius:0 25px 25px 0 ;
+    border: unset;
+    cursor: pointer;
+    img{
+        height: 50px;
+        transition: 0.5s;
+        transition-timing-function: ease-in-out;
+        &.spin{
+            rotate:180deg;
+        }
+        &.hover{
+            scale:1.1;
+        }
+    }
+}
+
+#backdrop{
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100vh;
+    width: 100vw;
+    background-color: rgba(0, 0, 0, 0.378);
+    z-index: -1;
+    &.hidden{
+        pointer-events: none;
+        opacity: 0;
+    }
+
+}
+
+
+.type {
+    color: white;
+    border-radius: 5px;
+    background-color: rgb(79, 78, 78);
+    display: inline-block;
+    margin-left: 10px; 
+    padding: 5px 10px;
+    font-size: x-large;
+}
+
+/* =======    cambiar fondo dependiendo del tipo    ======= */
+.tipo-bicho {
+    background-color: rgb(33, 86, 33);
+    color: white;
+    
+}
+
+.tipo-dragon {
+    background: linear-gradient(in oklab, red 50%, blue 50%);
+    color: white;
+}
+
+.tipo-fuego {
+    background-color: rgb(255, 69, 0);
+    color: white;
+}
+
+.tipo-hada {
+    background-color: rgb(255, 182, 193);
+    color: white;
+}
+
+.tipo-fantasma {
+    background-color: rgb(123, 104, 238);
+    color: white;
+}
+
+.tipo-tierra {
+    background: linear-gradient(in oklab, rgb(210, 180, 140), rgb(129, 88, 35));
+    color: white;
+}
+
+.tipo-normal {
+    background-color: rgb(169, 169, 169);
+    color: white;
+}
+
+.tipo-psiquico {
+    background-color: rgb(255, 20, 147);
+    color: white;
+}
+
+.tipo-acero {
+    background-color: rgb(192, 192, 192);
+    color: white;
+}
+
+.tipo-siniestro {
+    background-color: rgb(47, 79, 79);
+    color: white;
+}
+
+.tipo-electrico {
+    background-color: rgb(255, 255, 0);
+    color: black;
+}
+
+.tipo-lucha {
+    background-color: rgb(139, 0, 0);
+    color: white;
+}
+
+.tipo-volador {
+    background-color: rgb(135, 206, 235);
+    color: black;
+}
+
+.tipo-planta {
+    background-color: rgb(34, 139, 34);
+    color: white;
+}
+
+.tipo-veneno {
+    background-color: rgb(148, 0, 211);
+    color: white;
+}
+
+.tipo-hielo {
+    background-color: rgb(173, 216, 230);
+    color: black;
+}
+
+.tipo-agua {
+    background-color: rgb(0, 191, 255);
+    color: white;
+}
+
+.tipo-roca {
+    background-color: rgb(139, 69, 19);
+    color: white;
+}

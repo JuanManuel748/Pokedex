@@ -1,0 +1,31 @@
+<div class="container mt-4">
+    <h2>Empresas</h2>
+    <table *ngIf="companies.length > 0" class="table table-striped">
+    <thead class="table-dark">
+        <tr>
+        <th scope="col">Nombre</th>
+        <th scope="col">Dirección</th>
+        <th scope="col">Acciones</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor="let company of companies">
+        <td>{{ company.name }}</td>
+        <td>{{ company.address }}</td>
+        <td><div class="d-flex flex-row gap-2 align-items-center"><button (click)="deleteCompany(company.id!)" class="btn btn-danger btn-sm"><i class="bi bi-trash"></i> <span class="d-none d-md-inline-flex ps-2">Eliminar</span></button></div></td>
+        </tr>
+    </tbody>
+    </table>
+    <div class="d-grid gap-2 d-md-block">
+        <a class="btn btn-primary" href="#" role="button"><i class="bi bi-plus-lg"></i> Añadir empresa</a>
+    </div>
+</div>
+<!--
+
+<app-card-pokemon 
+        *ngFor="let pokemon of pokemonList" 
+        [data]="pokemon"
+        [selected]="pokemon.name === pokemonSelected?.name"
+        (clicked)="cardClick($event)">
+        </app-card-pokemon> 
+-->

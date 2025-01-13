@@ -1,0 +1,47 @@
+<div id="backdrop" [ngClass]="{hidden: !open}" (click)="clicked.emit()"></div>
+
+<div id="container">
+  <div id="data">
+    <div class="area card-pokemon-trainer">
+      <p></p>
+      <app-card-pokemon
+        [fullData]="pokemon"
+        [selected]="true"
+      ></app-card-pokemon>
+    </div>
+    <div class="area">
+      <p>
+        <span class="tag">Tipo: </span>
+        <span
+          *ngFor="let tp of pokemon?.types ?? []"
+          [ngClass]="getType(tp.type.name)"
+          class="type"
+          >{{ tp.type.name }}</span
+        >
+      </p>
+      <p>
+        <span class="tag">Altura: </span>
+        {{ (pokemon?.height ?? 0) / 10 | number : "1.1-1" }} m
+      </p>
+      <p>
+        <span class="tag">Peso:</span>
+        {{ (pokemon?.weight ?? 0) / 10 | number : "1.1-1" }} kg
+      </p>
+    </div>
+
+    <div class="area">
+      <div id="descriptionContainer">
+        <div></div>
+        <p>{{ description }}</p>
+        <div></div>
+      </div>
+    </div>
+  </div>
+  <button (click)="clicked.emit()">
+    <img
+      src="./../../../assets/img/flecha.png"
+      alt=""
+      [ngClass]="{spin: open}"
+    />
+  </button>
+</div>

@@ -1,0 +1,79 @@
+<div class="container">
+    <h1>FUNCIONA</h1>
+    <app-notification *ngIf="showAlert" [alertClass]="alertClass" [alertMessage]="alertMessage"/>
+    <form (submit)="updateParty()">
+      <div class="form-group mb-4">
+        <label for="name">Nombre</label>
+        <input
+          class="form-control"
+          id="name"
+          name="name"
+          type="text"
+          [(ngModel)]="party.name"
+        />
+      </div>
+      <div class="form-group mb-4">
+        <label for="poke_1">Pokemon 1</label>
+        <input
+          class="form-control"
+          id="poke_1"
+          name="poke_1"
+          type="text"
+          [(ngModel)]="party.poke_1"
+        />
+      </div>
+      <div class="form-group mb-4">
+        <label for="poke_1">Pokemon 2</label>
+        <input
+          class="form-control"
+          id="poke_2"
+          name="pokemon"
+          type="text"
+          [(ngModel)]="party.poke_2"
+        />
+      </div>
+      <div class="form-group mb-4">
+        <label for="poke_1">Pokemon 3</label>
+        <input
+          class="form-control"
+          id="poke_3"
+          name="pokemon"
+          type="text"
+          [(ngModel)]="party.poke_3"
+        />
+      </div>
+      <div class="form-group mb-4">
+        <label for="poke_1">Pokemon 4</label>
+        <input
+          class="form-control"
+          id="poke_4"
+          name="pokemon"
+          type="text"
+          [(ngModel)]="party.poke_4"
+        />
+      </div>
+      <div class="form-group mb-4">
+        <label for="poke_1">Pokemon 5</label>
+        <input
+          class="form-control"
+          id="poke_5"
+          name="pokemon"
+          type="text"
+          [(ngModel)]="party.poke_5"
+        />
+      </div>
+      <div class="form-group mb-4">
+        <label for="poke_1">Pokemon 6</label>
+        <input
+          class="form-control"
+          id="poke_6"
+          name="pokemon"
+          type="text"
+          [(ngModel)]="party.poke_6"
+        />
+      </div>
+      <div class="d-grid gap-2 d-md-block">
+        <button type="submit" class="btn btn-primary mt-3 "><i class="bi bi-pencil"></i> Editar</button>
+      </div>
+    </form>
+</div>
