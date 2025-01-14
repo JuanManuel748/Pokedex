@@ -39,6 +39,21 @@ export class ownedPokemonService {
     return deleteDoc(pokemonDocRef) as Promise<void>;
   }
 
+  async testConnection() {
+    const test = await getDocs(this.pokemonCollection);
 
-
+    console.log(test)
+    const paths = test.docs.map((doc) => {
+      const { name, id } = doc.data();
+      return {
+        params : { name, id },
+      };
+    });
+  
+    return {
+      paths,
+      fallback: 'blocking',
+    };
+    
+  }
 }

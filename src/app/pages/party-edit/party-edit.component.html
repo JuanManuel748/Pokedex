@@ -1,35 +1,54 @@
 <div class="container">
+  <app-notification
+    *ngIf="showAlert"
+    [alertClass]="alertClass"
+    [alertMessage]="alertMessage"
+  />
+  <form (submit)="updateParty()">
+    <div class="content">
+      <div class="name_party">
+        <label>Equipo</label>
+        <input
+          class="form-control"
+          id="name_party"
+          name="party"
+          type="text"
+          [(ngModel)]="party.name"
+        />
+      </div>
+      <div class="pokemons_party">
+        <h1>POKEMONS</h1>
+      </div>
+      <div class="picture">
+        <img src="../../../assets/img/char.png" id="pokemon_picture" />
+        <input
+          class="form-control"
+          id="name_pokemon"
+          name="pokemon"
+          type="text"
+          [(ngModel)]="party.poke_1.name"
+        />
+      </div>
+      <div class="search">
+        <input type="text" id="search_input" placeholder="Buscar Pokémon" />
+        <button (click)="searchPokemon()">Buscar</button>
+      </div>
+      <div class="attributtes">
+        <h2>Atributos</h2>
+        <div class="abilitie">
+          
+        </div>
+        <div class="item"></div>
+        <div class="moves">
+          <div class="move_1"></div>
+          <div class="move_2"></div>
+          <div class="move_3"></div>
+          <div class="move_4"></div>
+        </div>
+      </div>
+    </div>
+  </form>
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-  
   <!--
     <app-notification *ngIf="showAlert" [alertClass]="alertClass" [alertMessage]="alertMessage"/>
     <form (submit)="updateParty()">
@@ -107,5 +126,5 @@
         <button type="submit" class="btn btn-primary mt-3 "><i class="bi bi-pencil"></i> Editar</button>
       </div>
     </form>
-    -->    
+    -->
 </div>
