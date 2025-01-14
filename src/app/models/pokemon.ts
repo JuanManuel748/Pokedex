@@ -291,16 +291,16 @@ export enum Versions {
 }
 
 export interface Sprites {
-  back_default: string;
-  back_female?: any;
-  back_shiny: string;
+  back_default: string| undefined;
+  back_female?: any| undefined;
+  back_shiny: string| undefined;
   back_shiny_female?: any;
   front_default: string;
-  front_female?: any;
-  front_shiny: string;
-  front_shiny_female?: any;
-  other: Other;
-  versions: Versions;
+  front_female?: any| undefined;
+  front_shiny: string| undefined;
+  front_shiny_female?: any| undefined;
+  other: Other | undefined;
+  versions: Versions | undefined;
 }
 
 export interface Stat {
@@ -332,16 +332,16 @@ export interface PastType {
 
 export interface Pokemon {
   id?: string;
-  name: string;
-  base_experience: number;
-  height: number;
-  is_default: boolean;
-  order: number;
-  weight: number;
-  location_area_encounters: string;
-  sprites: Sprites;
-  types: Type[];
-  species: Species;
+  name: string | undefined;
+  base_experience: number | undefined;
+  height: number | undefined;
+  is_default: boolean | undefined;
+  order: number | undefined;
+  weight: number | undefined;
+  location_area_encounters: string | undefined;
+  sprites: Sprites | undefined;
+  types: Type[] | undefined;
+  species: Species | undefined;
   /* 
   //NO SE USAN POR AHORA 
   abilities: Ability[];
@@ -353,3 +353,42 @@ export interface Pokemon {
   past_types: PastType[];
   */
 }
+// Define the examplePokemon object outside of the interface definition
+export const examplePokemon: Pokemon = {
+  id: "413",
+  name: "wormadam",
+  base_experience: 148,
+  height: 5,
+  is_default: true,
+  order: 441,
+  weight: 65,
+  location_area_encounters: "/api/v2/pokemon/413/encounters",
+  sprites: {
+    front_default: "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/413.png",
+    back_default: "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/413.png",
+    back_shiny: "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/413.png",
+    front_shiny: "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/413.png",
+    other: undefined,
+    versions: undefined
+  },
+  types: [
+    {
+      slot: 1,
+      type: {
+        name: "bug",
+        url: "https://pokeapi.co/api/v2/type/7/"
+      }
+    },
+    {
+      slot: 2,
+      type: {
+        name: "grass",
+        url: "https://pokeapi.co/api/v2/type/12/"
+      }
+    }
+  ],
+  species: {
+    name: "wormadam",
+    url: "https://pokeapi.co/api/v2/pokemon-species/413/"
+  }
+};

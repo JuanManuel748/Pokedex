@@ -21,7 +21,6 @@ export class PartyListComponent implements OnInit {
   ngOnInit(): void {
     this.partyService.getParties().subscribe((parties) => {
       this.parties = parties;
-      console.log(this.parties);
     });
   }
 

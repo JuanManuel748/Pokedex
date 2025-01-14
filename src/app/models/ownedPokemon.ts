@@ -18,7 +18,8 @@ export interface pokemon {
 
 export interface ownedPokemon {
     id?: number;
-    nametag: string;
+    idPk: string;
+    name: string;
     abilitie: string;
     move_1: string;
     move_2: string;
@@ -26,4 +27,16 @@ export interface ownedPokemon {
     move_4: string;
     item: string;
 }
+
+export const exampleOwnedPokemon: ownedPokemon = {
+    id: 25,
+    idPk: "25",
+    name: 'Pikachu',
+    abilitie: 'Static',
+    move_1: 'Thunderbolt',
+    move_2: 'Quick Attack',
+    move_3: 'Iron Tail',
+    move_4: 'Electro Ball',
+    item: 'Light Ball'
+  };
 

@@ -1,30 +1,140 @@
 .container {
-    height: calc(110vh - 120px);
-    display: flex;
-    flex-direction: column;
-    justify-content: flex-start;
-    align-items: center;
-    background: repeating-linear-gradient(
-      0deg,
-      #79a0e3 0px,
-      #79a0e3 10px,
-      #668cd7 10px,
-      #668cd7 50px,
-      #79a0e3 50px,
-      #79a0e3 60px,
-      #5576c5 60px,
-      #5576c5 90px,
-      #79a0e3 90px,
-      #79a0e3 100px,
-      #4c69b8 100px,
-      #4c69b8 140px,
-      #79a0e3 140px,
-      #79a0e3 150px,
-      #4660b4 150px,
-      #4660b4 160px,
-      #79a0e3 160px,
-      #79a0e3 170px,
-      #5576c5 170px,
-      #5576c5 190px
-    );
-  }
+  height: calc(103vh - 120px);
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  background: repeating-linear-gradient(
+    0deg,
+    #79a0e3 0px,
+    #79a0e3 10px,
+    #668cd7 10px,
+    #668cd7 50px,
+    #79a0e3 50px,
+    #79a0e3 60px,
+    #5576c5 60px,
+    #5576c5 90px,
+    #79a0e3 90px,
+    #79a0e3 100px,
+    #4c69b8 100px,
+    #4c69b8 140px,
+    #79a0e3 140px,
+    #79a0e3 150px,
+    #4660b4 150px,
+    #4660b4 160px,
+    #79a0e3 160px,
+    #79a0e3 170px,
+    #5576c5 170px,
+    #5576c5 190px
+  );
+}
+
+.content {
+  width: 100%;
+  height: 100%;
+  display: grid;
+  grid-template-areas:
+    "name_party pokemons_party pokemons_party"
+    "picture attributtes attributtes"
+    "search attributtes attributtes";
+    padding: 10px 20px;
+    gap: 30px;
+}
+
+
+.name_party {
+  display: flex;
+  grid-area: name_party;
+  background-color: blue;
+
+}
+
+.pokemons_party {
+  display: flex;
+  grid-area: pokemons_party;
+  background-color: red;
+
+}
+
+.picture {
+  grid-area: picture;
+  background-color: green;
+  border: 5px solid #8cbbf1;
+  outline: 8px solid #f8e55c;
+  max-width: 500px;
+  aspect-ratio: 1;
+  border-radius: 25px;
+  background: repeating-linear-gradient(
+    to bottom,
+    #f5f7f9,
+    #f5f7f9 15px,
+    #c9e2f4 15px,
+    #c9e2f4 25px
+  );
+}
+
+.picture img {
+  width: 100%;
+  image-rendering: pixelated;
+}
+
+
+.search {
+  display: flex;
+  grid-area: search;
+  background-color: yellow;
+  
+
+}
+
+.search button {
+  height: 50px;
+  background-color: #D30A40; /* Color de fondo inicial */
+  color: white; /* Color del texto */
+  border: none; /* Sin borde */
+  border-radius: 5px; /* Bordes redondeados */
+  cursor: pointer; /* Cambia el cursor al pasar sobre el botón */
+  transition: background-color 0.3s ease; /* Transición suave para el cambio de color */
+}
+
+.search button img {
+  height: 50px;
+
+}
+
+.search button:hover {
+  background-color: #a00a30; /* Color de fondo rojo al pasar el ratón */
+}
+
+.attributtes {
+  display: flex;
+  grid-area: attributtes;
+  background-color: orange;
+
+}
+
+.abilitie{
+
+}
+
+.item{
+
+}
+
+.moves{
+
+}
+
+.move_1{
+
+}
+.move_2{
+  
+}
+.move_3{
+  
+}
+.move_4{
+  
+}
