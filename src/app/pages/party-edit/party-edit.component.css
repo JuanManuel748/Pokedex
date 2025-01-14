@@ -108,21 +108,29 @@
 }
 
 .attributtes {
-  display: flex;
+  display: grid;
   grid-area: attributtes;
+  grid-template-areas: "abilitie item"
+  "moves moves"
+  "moves moves";
   background-color: orange;
 
 }
 
 .abilitie{
+  grid-area: abilitie;
 
 }
 
 .item{
+  grid-area: item;
 
 }
 
 .moves{
+  grid-area: moves;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
 
 }
 

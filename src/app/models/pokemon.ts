@@ -26,7 +26,7 @@ export interface GameIndice {
 
 export interface Item {
   name: string;
-  url: string;
+  url: string | undefined;
 }
 
 export interface Version2 {
@@ -294,7 +294,7 @@ export interface Sprites {
   back_default: string| undefined;
   back_female?: any| undefined;
   back_shiny: string| undefined;
-  back_shiny_female?: any;
+  back_shiny_female?: any | undefined;
   front_default: string;
   front_female?: any| undefined;
   front_shiny: string| undefined;
@@ -355,19 +355,19 @@ export interface Pokemon {
 }
 // Define the examplePokemon object outside of the interface definition
 export const examplePokemon: Pokemon = {
-  id: "413",
-  name: "wormadam",
-  base_experience: 148,
-  height: 5,
+  id: "25",
+  name: "pikachu",
+  base_experience: 112,
+  height: 4,
   is_default: true,
-  order: 441,
-  weight: 65,
-  location_area_encounters: "/api/v2/pokemon/413/encounters",
+  order: 35,
+  weight: 60,
+  location_area_encounters: "/api/v2/pokemon/25/encounters",
   sprites: {
-    front_default: "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/413.png",
-    back_default: "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/413.png",
-    back_shiny: "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/413.png",
-    front_shiny: "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/413.png",
+    front_default: "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/25.png",
+    back_default: "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/back/25.png",
+    back_shiny: "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/back/shiny/25.png",
+    front_shiny: "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/shiny/25.png",
     other: undefined,
     versions: undefined
   },
@@ -375,20 +375,13 @@ export const examplePokemon: Pokemon = {
     {
       slot: 1,
       type: {
-        name: "bug",
-        url: "https://pokeapi.co/api/v2/type/7/"
-      }
-    },
-    {
-      slot: 2,
-      type: {
-        name: "grass",
-        url: "https://pokeapi.co/api/v2/type/12/"
+        name: "electric",
+        url: "https://pokeapi.co/api/v2/type/13/"
       }
     }
   ],
   species: {
-    name: "wormadam",
-    url: "https://pokeapi.co/api/v2/pokemon-species/413/"
+    name: "pikachu",
+    url: "https://pokeapi.co/api/v2/pokemon-species/25/"
   }
 };
