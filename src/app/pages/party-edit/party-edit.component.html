@@ -34,16 +34,41 @@
         <button (click)="searchPokemon()">Buscar</button>
       </div>
       <div class="attributtes">
-        <h2>Atributos</h2>
         <div class="abilitie">
-          
+          <label for="abilities-select">Seleccionar Habilidad:</label><br>
+          <select id="abilities-select" [(ngModel)]="selectedPokemon.abilitie" class="form-control">
+            <option *ngFor="let ability of listAbilities" [value]="ability.name">{{ ability.name }}</option>
+          </select>
         </div>
-        <div class="item"></div>
+        <div class="item">
+          <label for="item-select">Seleccionar objeto:</label><br>
+          <select id="item-select" [(ngModel)]="selectedPokemon.item" class="form-control">
+            <option *ngFor="let item of listItems" [value]="item.name">{{ item.name }}</option>
+          </select>
+        </div>
         <div class="moves">
-          <div class="move_1"></div>
-          <div class="move_2"></div>
-          <div class="move_3"></div>
-          <div class="move_4"></div>
+          <div class="move_1">
+            
+          <label for="move-select">Seleccionar movimiento 1:</label><br>
+          <select id="move1-select" [(ngModel)]="selectedPokemon.move_1" class="form-control">
+            <option *ngFor="let move of listMoves" [value]="move.name" ngDefaultControl="listMoves[1]">{{ move.name }}</option>
+          </select>
+          </div>
+          <div class="move_2">
+            <label for="move-select">Seleccionar movimiento 2:</label><br>
+            <select id="move2-select" [(ngModel)]="selectedPokemon.move_2" class="form-control">
+              <option *ngFor="let move of listMoves" [value]="move.name">{{ move.name }}</option>
+            </select></div>
+          <div class="move_3">
+            <label for="move-select">Seleccionar movimiento 3:</label><br>
+            <select id="move3-select" [(ngModel)]="selectedPokemon.move_3" class="form-control">
+              <option *ngFor="let move of listMoves" [value]="move.name">{{ move.name }}</option>
+            </select></div>
+          <div class="move_4">
+            <label for="move-select">Seleccionar movimiento 4:</label><br>
+            <select id="move4-select" [(ngModel)]="selectedPokemon.move_4" class="form-control">
+              <option *ngFor="let move of listMoves" [value]="move.name">{{ move.name }}</option>
+            </select></div>
         </div>
       </div>
     </div>
