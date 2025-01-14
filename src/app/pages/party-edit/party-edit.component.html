@@ -11,20 +11,54 @@
         <input
           class="form-control"
           id="name_party"
-          name="party"
+          name="party.name"
           type="text"
           [(ngModel)]="party.name"
         />
       </div>
       <div class="pokemons_party">
-        <h1>POKEMONS</h1>
+        <div [ngClass]="party.poke_1.idPk" id="poke_1">
+          <button (click)="onPokemonButtonClick(party.poke_1)">
+            <img src="../../../assets/img/char.png" alt="poke_1" id="picture_poke_1">
+          </button>
+        </div>
+  
+        <div [ngClass]="party.poke_2.idPk" id="poke_2">
+          <button (click)="onPokemonButtonClick(party.poke_1)">
+            <img src="../../../assets/img/char.png" alt="poke_2" id="picture_poke_2">
+          </button>
+        </div>
+        
+        <div [ngClass]="party.poke_3.idPk" id="poke_3">
+          <button (click)="onPokemonButtonClick(party.poke_1)">
+            <img src="../../../assets/img/char.png" alt="poke_3" id="picture_poke_3">
+          </button>
+        </div>
+        
+        <div [ngClass]="party.poke_4.idPk" id="poke_4">
+          <button (click)="onPokemonButtonClick(party.poke_1)">
+            <img src="../../../assets/img/char.png" alt="poke_4" id="picture_poke_4">
+          </button>
+        </div>
+        
+        <div [ngClass]="party.poke_5.idPk" id="poke_5">
+          <button (click)="onPokemonButtonClick(party.poke_1)">
+            <img src="../../../assets/img/char.png" alt="poke_5" id="picture_poke_5">
+          </button>
+        </div>
+        
+        <div [ngClass]="party.poke_6.idPk" id="poke_6">
+          <button (click)="onPokemonButtonClick(party.poke_1)">
+            <img src="../../../assets/img/char.png" alt="poke_6" id="picture_poke_6">
+          </button>
+        </div>
       </div>
       <div class="picture">
         <img src="../../../assets/img/char.png" id="pokemon_picture" />
         <input
           class="form-control"
           id="name_pokemon"
-          name="pokemon"
+          name="party.poke_1.name"
           type="text"
           [(ngModel)]="party.poke_1.name"
         />
@@ -36,37 +70,36 @@
       <div class="attributtes">
         <div class="abilitie">
           <label for="abilities-select">Seleccionar Habilidad:</label><br>
-          <select id="abilities-select" [(ngModel)]="selectedPokemon.abilitie" class="form-control">
+          <select id="ability-select" [(ngModel)]="selectedPokemon.abilitie" class="form-control" name="selectedPokemon.abilitie">
             <option *ngFor="let ability of listAbilities" [value]="ability.name">{{ ability.name }}</option>
           </select>
         </div>
         <div class="item">
           <label for="item-select">Seleccionar objeto:</label><br>
-          <select id="item-select" [(ngModel)]="selectedPokemon.item" class="form-control">
+          <select id="item-select" [(ngModel)]="selectedPokemon.item" class="form-control" name="selectedPokemon.item">
             <option *ngFor="let item of listItems" [value]="item.name">{{ item.name }}</option>
           </select>
         </div>
         <div class="moves">
           <div class="move_1">
-            
           <label for="move-select">Seleccionar movimiento 1:</label><br>
-          <select id="move1-select" [(ngModel)]="selectedPokemon.move_1" class="form-control">
-            <option *ngFor="let move of listMoves" [value]="move.name" ngDefaultControl="listMoves[1]">{{ move.name }}</option>
+          <select id="move1-select" [(ngModel)]="selectedPokemon.move_1" class="form-control" name="selectedPokemon.move_1">
+            <option *ngFor="let move of listMoves" [value]="move.name">{{ move.name }}</option>
           </select>
           </div>
           <div class="move_2">
             <label for="move-select">Seleccionar movimiento 2:</label><br>
-            <select id="move2-select" [(ngModel)]="selectedPokemon.move_2" class="form-control">
+            <select id="move2-select" [(ngModel)]="selectedPokemon.move_2" class="form-control" name="selectedPokemon.move_2">
               <option *ngFor="let move of listMoves" [value]="move.name">{{ move.name }}</option>
             </select></div>
           <div class="move_3">
             <label for="move-select">Seleccionar movimiento 3:</label><br>
-            <select id="move3-select" [(ngModel)]="selectedPokemon.move_3" class="form-control">
+            <select id="move3-select" [(ngModel)]="selectedPokemon.move_3" class="form-control" name="selectedPokemon.move_3">
               <option *ngFor="let move of listMoves" [value]="move.name">{{ move.name }}</option>
             </select></div>
           <div class="move_4">
             <label for="move-select">Seleccionar movimiento 4:</label><br>
-            <select id="move4-select" [(ngModel)]="selectedPokemon.move_4" class="form-control">
+            <select id="move4-select" [(ngModel)]="selectedPokemon.move_4" class="form-control" name="selectedPokemon.move_4">
               <option *ngFor="let move of listMoves" [value]="move.name">{{ move.name }}</option>
             </select></div>
         </div>

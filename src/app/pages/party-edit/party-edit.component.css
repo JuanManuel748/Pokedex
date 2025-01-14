@@ -1,5 +1,5 @@
 .container {
-  height: calc(103vh - 120px);
+  /*height: calc(103vh - 120px);*/
   width: 100%;
   display: flex;
   flex-direction: column;
@@ -38,23 +38,49 @@
     "name_party pokemons_party pokemons_party"
     "picture attributtes attributtes"
     "search attributtes attributtes";
-    padding: 10px 20px;
-    gap: 30px;
+    padding: 0% 2px 10px;
+    gap: 10px 20px;
+    
+    
+    border: 3px solid #00336d;
+    outline: 5px solid #4500ad;
+    border-radius: 25px;
 }
 
 
 .name_party {
   display: flex;
   grid-area: name_party;
-  background-color: blue;
-
+  background: linear-gradient(to right, rgba(0, 0, 197, 0.9) 50%, rgba(0, 0, 255, 0) 100%);
+  border-top-left-radius: 25px;
+  border-top-right-radius: 0px;
+  margin-left: -2px;
+  position: relative;
+    label{
+      margin: 5px;
+      margin-top: 15px;
+      font-style: italic;
+      font-size: medium;
+    }
+    input{
+      background-color: transparent;
+      color: white;
+      border: 0px solid white;
+      margin-bottom: 40px;
+      font-style: italic;
+      font-size: medium;
+    }
 }
 
 .pokemons_party {
   display: flex;
   grid-area: pokemons_party;
-  background-color: red;
-
+  background: linear-gradient(to left, rgba(255, 0, 0, 0.9) 60%, rgba(255, 0, 0, 0) 100%);
+  margin-right: -2px;
+  border-top-right-radius: 25px;
+    h1{
+      margin-left: 30%;
+    }
 }
 
 .picture {
@@ -62,7 +88,7 @@
   background-color: green;
   border: 5px solid #8cbbf1;
   outline: 8px solid #f8e55c;
-  max-width: 500px;
+  max-width: 400px;
   aspect-ratio: 1;
   border-radius: 25px;
   background: repeating-linear-gradient(
@@ -72,6 +98,12 @@
     #c9e2f4 15px,
     #c9e2f4 25px
   );
+  input{
+    border-radius: 15px;
+    font-style: italic;
+    font-size: medium;
+    margin-left: 20%;
+  }
 }
 
 .picture img {
@@ -81,21 +113,39 @@
 
 
 .search {
+  
   display: flex;
   grid-area: search;
-  background-color: yellow;
-  
-
+  background: linear-gradient(to right, rgb(255, 255, 0, 0.9) 60%, rgba(255, 0, 0, 0) 100%);
+  border-bottom-left-radius: 25px;
+  margin-left: 60%;
+  margin-right: 45%;
+  margin-top: -5%;
+  margin-bottom: -4%;
+  border-bottom-right-radius: 5px;
+    input{
+      margin-bottom: 4px;
+      margin-left: -2px;
+      border-top-left-radius: 10px;
+      border-top-right-radius: 10px;
+      border-bottom-right-radius: 14px;
+      border-bottom-left-radius: 14px;
+      
+    }
 }
 
 .search button {
   height: 50px;
-  background-color: #D30A40; /* Color de fondo inicial */
-  color: white; /* Color del texto */
-  border: none; /* Sin borde */
-  border-radius: 5px; /* Bordes redondeados */
-  cursor: pointer; /* Cambia el cursor al pasar sobre el botón */
-  transition: background-color 0.3s ease; /* Transición suave para el cambio de color */
+  background-color: #D30A40;
+  color: white;
+  border: none;
+  border-radius: 15px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  margin-top: 1px;
+  margin-bottom: -4px;
+  margin-left: 3px;
+  position: sticky;
 }
 
 .search button img {
@@ -104,45 +154,29 @@
 }
 
 .search button:hover {
-  background-color: #a00a30; /* Color de fondo rojo al pasar el ratón */
+  background-color: #a00a30;
 }
 
-.attributtes {
-  display: grid;
-  grid-area: attributtes;
-  grid-template-areas: "abilitie item"
-  "moves moves"
-  "moves moves";
-  background-color: orange;
-
+.attributtes, .abilitie, .item, .moves, .move_1, .move_2, .move_3, .move_4 {
+  background-color: rgba(255, 255, 255, 0.1);
+  border: 1px solid rgba(0, 0, 0, 0.2);
+  border-radius: 10px;
+  padding: 10px;
+  margin: 5px 0;
+  color: white;
+  font-size: 14px;
 }
 
-.abilitie{
-  grid-area: abilitie;
-
+.abilitie label, .item label, .moves label {
+  font-weight: bold;
+  margin-bottom: 5px;
 }
 
-.item{
-  grid-area: item;
-
+.moves {
+  display: flex;
+  flex-direction: column;
 }
 
-.moves{
-  grid-area: moves;
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-
-}
-
-.move_1{
-
-}
-.move_2{
-  
-}
-.move_3{
-  
-}
-.move_4{
-  
+.move_1, .move_2, .move_3, .move_4 {
+  margin: 5px 0;
 }

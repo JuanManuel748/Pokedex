@@ -20,9 +20,9 @@ export class ownedPokemonService {
     return collectionData(this.pokemonCollection, { idField: 'id' }) as Observable<ownedPokemon[]>;
   }
 
-  getPokemon(id: string): Observable<ownedPokemon | undefined> {
+  getPokemon(id: string): Observable<ownedPokemon> {
     const pokemonDocRef = doc(this.firestore, `pokemon/${id}`);
-    return docData(pokemonDocRef) as Observable<ownedPokemon | undefined>;
+    return docData(pokemonDocRef) as Observable<ownedPokemon>;
   }
 
   addPokemon(poke: ownedPokemon): Promise<void> {
@@ -41,8 +41,6 @@ export class ownedPokemonService {
 
   async testConnection() {
     const test = await getDocs(this.pokemonCollection);
-
-    console.log(test)
     const paths = test.docs.map((doc) => {
       const { name, id } = doc.data();
       return {
