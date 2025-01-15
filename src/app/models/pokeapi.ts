@@ -9,3 +9,8 @@ export interface Result {
     name: string,
     url: string
 }
+
+export const exampleResult: Result = {
+    name: 'aa',
+    url: 'aa',
+};

@@ -1,21 +1,43 @@
 <main id="container">
   <app-detail
-  [pokemon]="pokemonSelected"
-  (clicked)="changeDetail()"
-  [open]="detail"
-  [ngClass]="{open: detail}"
+    [pokemon]="pokemonSelected"
+    (clicked)="changeDetail()"
+    [open]="detail"
+    [ngClass]="{ open: detail }"
   ></app-detail>
   <app-picture-pokemon
-  [pokemon]="pokemonSelected"
-  [ngClass]="{open: detail}"
+    [pokemon]="pokemonSelected"
+    [ngClass]="{ open: detail }"
   ></app-picture-pokemon>
+  <div class="search">
+    <input
+      type="text"
+      placeholder="Buscar Pokémon"
+      id="search_input"
+      (input)="onSearch($event)"
+    />
+  </div>
   <div id="cardsContainer" #cards (scroll)="onScroll($event)">
-      <app-card-pokemon 
-      *ngFor="let pokemon of pokemonList" 
+    <app-card-pokemon
+      *ngFor="let pokemon of filteredPokemonList"
       [data]="pokemon"
       [selected]="pokemon.name === pokemonSelected?.name"
-      (clicked)="cardClick($event)">
-      </app-card-pokemon> 
-      <img id="spinner" src="../../../assets/img/spinner.svg" alt="loading" *ngIf="loading">
+      (clicked)="cardClick($event)"
+    >
+    </app-card-pokemon>
+    <img
+      id="spinner"
+      src="../../../assets/img/spinner.svg"
+      alt="loading"
+      *ngIf="loading"
+    />
+  
+    <div class="alert">
+      <app-notification
+        *ngIf="showAlert"
+        [alertClass]="alertClass"
+        [alertMessage]="alertMessage"
+      />
+    </div>
   </div>
 </main>
