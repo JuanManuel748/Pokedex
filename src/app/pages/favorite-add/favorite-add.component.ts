@@ -24,21 +24,45 @@ export class FavoriteAddComponent {
   constructor(private favService: FavoriteService) {}
 
   submitFav() {
-    let newFav: Favorite = {
-      user: this.favForm.value.user ?? "",
-      idPoke: this.favForm.value.idPoke ?? "",
-      name_poke: this.favForm.value.name_poke ?? ""
+    if (this.validateFields()) {
+      let newFav: Favorite = {
+        user: this.favForm.value.user ?? "",
+        idPoke: this.favForm.value.idPoke ?? "",
+        name_poke: this.favForm.value.name_poke ?? ""
+      }
+      this.favService.addFavorite(newFav).then(() => {
+        this.alertMessage = `Añadido favorito ${this.favForm.value.user}`;
+        this.alertClass = "success";
+        this.showAlert = true;
+        this.favForm.reset();
+      }).catch((error) => {
+        this.alertMessage = `Error al añadir favorito ${this.favForm.value.user}: ${error}`;
+        this.alertClass = "danger";
+        this.showAlert = true;
+      });
     }
-    this.favService.addFavorite(newFav).then(() => {
-      this.alertMessage = `Añadido favorito ${this.favForm.value.user}`;
-      this.alertClass = "success";
-      this.showAlert = true;
-      this.favForm.reset();
-    }).catch((error) => {
-      this.alertMessage = `Error al añadir favorito ${this.favForm.value.user}: ${error}`;
+  }
+
+  validateFields(): boolean {
+    let resultB = true;
+    const user = this.favForm.get('user')?.value;
+    const name_poke = this.favForm.get('name_poke')?.value;
+    const idPoke = this.favForm.get('idPoke')?.value;
+
+    if (!user || !name_poke || !idPoke) {
+      resultB = false;
+      this.alertMessage = "Todos los campos son obligatorios.";
       this.alertClass = "danger";
       this.showAlert = true;
-    });
+    } else if (isNaN(Number(idPoke)) || Number(idPoke) < 1 || Number(idPoke) > 1000) {
+      resultB = false;
+      this.alertMessage = "El ID del Pokémon debe ser un número entre 1 y 1000.";
+      this.alertClass = "danger";
+      this.showAlert = true;
+    } else {
+      this.showAlert = false;
+    }
+    return resultB;
   }
 
   getPokemonImageUrl(): string {
