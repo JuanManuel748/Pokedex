@@ -2,163 +2,220 @@ a {
   text-decoration: none;
 }
 .container::before {
-    content: '';
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background: repeating-linear-gradient(
-      0deg,
-      #79a0e3 0px,
-      #79a0e3 10px,
-      #668cd7 10px,
-      #668cd7 50px,
-      #79a0e3 50px,
-      #79a0e3 60px,
-      #5576c5 60px,
-      #5576c5 90px,
-      #79a0e3 90px,
-      #79a0e3 100px,
-      #4c69b8 100px,
-      #4c69b8 140px,
-      #79a0e3 140px,
-      #79a0e3 150px,
-      #4660b4 150px,
-      #4660b4 160px,
-      #79a0e3 160px,
-      #79a0e3 170px,
-      #5576c5 170px,
-      #5576c5 190px
-    );
-    z-index: -1;
-  }
-  
-  .container {
-    max-width: 70%;
-    margin: auto;
-    padding: 20px;
-    background-color: #ffb2b9;
-    border-radius: 10px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
-    position: relative;
-  }
-  
-  .content {
-    padding: 20px;
-    background-color: #f8d7da;
-    border-radius: 10px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-  }
-  
-  .table {
-    background-color: #f8d7da; 
-    border: 1px solid #D30A40; 
-    width: 100%; 
-    font-size: 1.6em; 
-    border-collapse: collapse; 
-    text-align: center; /* Centra el contenido horizontalmente */
+  content: "";
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: repeating-linear-gradient(
+    0deg,
+    #79a0e3 0px,
+    #79a0e3 10px,
+    #668cd7 10px,
+    #668cd7 50px,
+    #79a0e3 50px,
+    #79a0e3 60px,
+    #5576c5 60px,
+    #5576c5 90px,
+    #79a0e3 90px,
+    #79a0e3 100px,
+    #4c69b8 100px,
+    #4c69b8 140px,
+    #79a0e3 140px,
+    #79a0e3 150px,
+    #4660b4 150px,
+    #4660b4 160px,
+    #79a0e3 160px,
+    #79a0e3 170px,
+    #5576c5 170px,
+    #5576c5 190px
+  );
+  z-index: -1;
+}
 
-  }
+.container {
+  max-width: 70%;
+  margin: auto;
+  padding: 20px;
+  background-color: #ffb2b9;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+  position: relative;
+}
 
-  .table img{
-    width: 150px;
-  }
-  
-  .table thead {
-    background-color: #D30A40; 
-    color: white; 
-  }
-  
-  .table tbody tr:nth-child(even) {
-    background-color: #f5c6cb;
-  }
-  
-  .table tbody tr:nth-child(odd) {
-    background-color: #f8d7da; 
-  }
-  
-  .table tbody tr:hover {
-    background-color: #ff7575; 
-    color: white;
-  }
-  
-  .table td, .table th {
-    vertical-align: middle; /* Centra el contenido verticalmente */
-    border: 1px solid #D30A40;
-    padding: 12px;
-  }
+.content {
+  padding: 20px;
+  background-color: #f8d7da;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
 
-  .table td {
-    font-size: 1.5em;
-  }
-  .table td:hover {
-    border: 1px solid #f8d7da; 
-    padding: 12px; 
-  }
-  .table .actions {
-    justify-content: center;
-    vertical-align: middle; /* Centra el contenido verticalmente */
-  }
-  
-  .btn {
-    display: inline-block;
-    font-weight: 400;
-    color: #212529;
-    text-align: center;
-    vertical-align: middle;
-    cursor: pointer;
-    background-color: transparent;
-    border: 1px solid transparent;
-    padding: 0.375rem 0.75rem;
-    font-size: 1.5rem;
-    line-height: 1.5;
-    border-radius: 0.25rem;
-    transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out, border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
-  }
-  
-  .btn-primary {
-    color: #fff;
-    margin-bottom: 10px;
-    background-color: #D30A40; 
-    border-color: #D30A40; 
-  }
-  
-  .btn-primary:hover {
-    color: #fff;
-    background-color: #a00a30; 
-    border-color: #a00a30; 
-  }
-  
-  .btn-danger {
-    color: #fff;
-    background-color: #D30A40;
-    border-color: #D30A40;
-    margin-bottom: 10px;
-  }
-  
-  .btn-danger:hover {
-    color: #fff;
-    background-color: #a00a30;
-    border-color: #a00a30;
-  }
-  
-  .d-flex {
-    display: flex !important;
-  }
-  
-  .flex-row {
-    flex-direction: row !important;
-  }
-  
-  .gap-2 {
-    gap: 0.5rem !important;
-  }
-  
-  .align-items-center {
-    align-items: center !important;
-  }
-  
-  .mt-4 {
-    margin-top: 1.5rem !important;
-  }
+.tableContainer {
+  max-height: 400px; /* Ajusta la altura máxima que desees para la tabla */
+  overflow-y: auto; /* Permite el desplazamiento vertical cuando el contenido exceda la altura */
+}
+
+.table {
+  background-color: #f8d7da;
+  border: 1px solid #d30a40;
+  width: 100%;
+  font-size: 1.6em;
+  border-collapse: collapse;
+  text-align: center; /* Centra el contenido horizontalmente */
+}
+
+.table img {
+  width: 150px;
+}
+
+.table thead {
+  background-color: #d30a40;
+  color: white;
+  position: sticky;
+  top: 0;
+  z-index: 1; /* Esto asegura que el encabezado se quede por encima del contenido */
+}
+
+.table tbody tr:nth-child(even) {
+  background-color: #f5c6cb;
+}
+
+.table tbody tr:nth-child(odd) {
+  background-color: #f8d7da;
+}
+
+.table tbody tr:hover {
+  background-color: #ff7575;
+  color: white;
+}
+
+.table td,
+.table th {
+  vertical-align: middle; /* Centra el contenido verticalmente */
+  border: 1px solid #d30a40;
+  padding: 12px;
+}
+
+.table td {
+  font-size: 1.5em;
+}
+.table td:hover {
+  border: 1px solid #f8d7da;
+  padding: 12px;
+}
+.table .actions {
+  justify-content: center;
+  vertical-align: middle; /* Centra el contenido verticalmente */
+}
+
+.btn {
+  display: inline-block;
+  font-weight: 400;
+  color: #212529;
+  text-align: center;
+  vertical-align: middle;
+  cursor: pointer;
+  background-color: transparent;
+  border: 1px solid transparent;
+  padding: 0.375rem 0.75rem;
+  font-size: 1.5rem;
+  line-height: 1.5;
+  border-radius: 0.25rem;
+  transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out,
+    border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
+}
+
+.btn-primary {
+  color: #fff;
+  margin-bottom: 10px;
+  background-color: #d30a40;
+  border-color: #d30a40;
+}
+
+.btn-primary:hover {
+  color: #fff;
+  background-color: #a00a30;
+  border-color: #a00a30;
+}
+
+.btn-danger {
+  color: #fff;
+  background-color: #d30a40;
+  border-color: #d30a40;
+  margin-bottom: 10px;
+}
+
+.btn-danger:hover {
+  color: #fff;
+  background-color: #a00a30;
+  border-color: #a00a30;
+}
+
+.d-flex {
+  display: flex !important;
+}
+
+.flex-row {
+  flex-direction: row !important;
+}
+
+.gap-2 {
+  gap: 0.5rem !important;
+}
+
+.align-items-center {
+  align-items: center !important;
+}
+
+.mt-4 {
+  margin-top: 1.5rem !important;
+}
+
+.options {
+  display: flex;
+  width: 100%;
+  justify-content: space-between; /* Espacio entre los elementos */
+}
+
+.search {
+  display: flex;
+  align-items: center; /* Alinea verticalmente el campo de búsqueda y el botón */
+  gap: 20px;
+}
+
+#search_input {
+  color: #fff;
+  background-color: #ff7c7c;
+  border-color: #d30a40;
+  padding: 5px 10px; /* Añadido para que el input tenga algo de relleno */
+  font-size: 1.4em; /* Ajusta el tamaño de la fuente */
+  border-radius: 5px 0 0 5px; /* Bordes redondeados en la izquierda */
+  margin-bottom: 10px; /* Asegura que tenga el mismo margen que el botón */
+  width: auto;
+}
+
+#search_input:focus {
+  outline: none; /* Elimina el borde azul predeterminado cuando está enfocado */
+  background-color: #a00a30; /* Cambia el color de fondo al estar enfocado */
+  border-color: #a00a30; /* Cambia el borde al estar enfocado */
+}
+
+button {
+  color: #fff;
+  background-color: #d30a40;
+  border-color: #d30a40;
+  margin-bottom: 10px;
+  cursor: pointer;
+  border-radius: 0 5px 5px 0; /* Bordes redondeados en la derecha */
+}
+
+button:hover {
+  color: #fff;
+  background-color: #a00a30;
+  border-color: #a00a30;
+}
+
+button img {
+  width: 30px; /* Ajusta el tamaño del icono de la lupa */
+}

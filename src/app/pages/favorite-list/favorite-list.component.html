@@ -1,17 +1,25 @@
 <div class="container mt-4">
   <div class="content">
-    <div class="d-grid gap-2 d-md-block">
-      <a class="btn btn-primary nav-link" [routerLink]="['/favs/add']" 
-      routerLinkActive="active" role="button">
-        <i class="bi bi-plus-lg"></i> Añadir favorito
-      </a>
-      <div class="search">
-        
+      <div class="d-grid gap-2 d-md-block options">
+        <div class="add_btn">
+          <a class="btn btn-primary nav-link" [routerLink]="['/favs/add']" 
+          routerLinkActive="active" role="button">
+            <i class="bi bi-plus-lg"></i> Añadir favorito
+          </a>
+        </div>
+        <div class="search">
+          <input
+          type="text"
+          id="search_input"
+          placeholder="Buscar por nombre de usuario"
+        />
+        <button (click)="search()"><img src="../../../assets/img/lupa.png" alt="search"></button>
+        </div>
       </div>
-    </div>
     <p></p>
+    <div class="tableContainer">
     <table
-      *ngIf="favourites?.length && favourites.length > 0"
+      *ngIf="filteredFavourites?.length && filteredFavourites.length > 0"
       class="table table-striped"
     >
       <thead class="table-dark">
@@ -23,7 +31,7 @@
         </tr>
       </thead>
       <tbody>
-        <tr *ngFor="let fav of favourites">
+        <tr *ngFor="let fav of filteredFavourites">
           <td>{{ fav.user }}</td>
           <td><img [src]="'https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/' + fav.idPoke + '.png'"></td>
           <td>{{ fav.name_poke }}</td>
@@ -51,5 +59,6 @@
         </tr>
       </tbody>
     </table>
+  </div>
   </div>
 </div>

@@ -39,6 +39,15 @@ section::before{
       border-radius: 8px;
       box-shadow: 0 0 10px rgba(0, 0, 0, 0.4);
       position: relative;
+      display: grid;
+      grid-template-areas: "alert alert"
+      "form preview";
+    }
+    .alert {
+      grid-area: alert;
+    }
+    form {
+      grid-area: form;
     }
     
     .title h2 {
@@ -112,19 +121,57 @@ section::before{
     background-color: #a00a30;
     border-color: #a00a30;
   }
-  
   .previewPokemon {
+    grid-area: preview;
     text-align: center;
-    margin-top: 20px;
+    margin-top: 15%;
+    margin-left: 10%;
+    input {
+      margin-top: 5%;
+      border-radius: 8px;
+      padding: 10px;
+      width: 50%;
+      margin-left: -5px;
+      background: #f8d7da;
+      border-color: #d30a40;
+    }
+    input:focus {
+      box-shadow: 0 0 10px rgba(211, 10, 64, 1);
+      outline: none;
+    }
   }
   
-  .previewPokemon img {
-    max-width: 150%;
+  .previewPokemon #preview {
+    width: 250px;
+    max-width: 100%;
     height: auto;
     border: 1px solid #ff8791;
     border-radius: 8px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
-    font-size: 1.6em;
+  }
+  
+  .searchPokemon {
+    display: flex;
+    justify-content: center; /* Centra los elementos horizontalmente */
+    align-items: center; /* Centra los elementos verticalmente */
+  }
+  
+  .search_button {
+    background-color: transparent;
+    border: transparent;
+    display: flex; /* Asegura que la imagen esté centrada dentro del botón */
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .search_button:hover {
+    color: #fff;
+    background-color: #a00a30;
+    border-color: #a00a30;
+  }
+  
+  #search {
+    width: 30px;
   }
   
   .alert {

@@ -13,8 +13,8 @@ export const routes: Routes = [
     { path: '', component: HomeComponent },
     { path: 'login', component: LoginGoogleComponent},
     { path: 'favs', component: FavoriteListComponent},
-    { path: 'favs/add', component: FavoriteAddComponent, canActivate: [AuthGuard]},
-    { path: 'favs/edit/:id', component: FavoriteEditComponent, canActivate: [AuthGuard]},
-    { path: 'parties', component: PartyListComponent},
+    // , canActivate: [AuthGuard]
+    { path: 'favs/add', component: FavoriteAddComponent},
+    { path: 'favs/edit/:id', component: FavoriteEditComponent},
     { path: '**', component: ErrorPageComponent }
 ];
