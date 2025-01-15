@@ -47,16 +47,19 @@
     </div>
   </form>
   <div class="previewPokemon">
-    <img
-      [src]="getPokemonImageUrl()"
-      alt="No se ha encontrado el pokemon"
-      id="preview"
-    /><br />
+    <div class="previewContainer">
+      <img
+        [src]="getPokemonImageUrl()"
+        alt="No se ha encontrado el pokemon"
+        id="preview"
+      />
+    </div>
+    <br />
     <div class="searchPokemon">
       <input type="text" id="search_input" placeholder="Buscar pokemon" />
-    <button (click)="search()" class="search_button">
-      <img src="../../../assets/img/lupa.png" alt="search" id="search"/>
-    </button>
+      <button (click)="search()" class="search_button">
+        <img src="../../../assets/img/lupa.png" alt="search" id="search" />
+      </button>
     </div>
   </div>
 </section>

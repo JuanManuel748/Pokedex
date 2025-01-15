@@ -151,9 +151,21 @@ form {
   width: 250px;
   max-width: 100%;
   height: auto;
-  border: 1px solid #ff8791;
-  border-radius: 8px;
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+  image-rendering: pixelated;
+}
+
+.previewContainer{
+  border: 5px solid #8cbbf1;
+  outline: 8px solid #ff8791;
+  aspect-ratio: 1;
+  border-radius: 25px;
+  background: repeating-linear-gradient(
+      to bottom,
+      #f5f7f9,
+      #f5f7f9 15px,
+      #c9e2f4 15px,
+      #c9e2f4 25px
+  );
 }
 
 .searchPokemon {
