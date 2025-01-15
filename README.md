@@ -1,7 +1,13 @@
-# Pokedex
+![Pokedex](https://github.com/user-attachments/assets/b99b46a0-5975-4cad-9a7a-828bab26993f)
 
-This project was generated using [Angular CLI](https://github.com/angular/angular-cli) version 19.0.6.
-This project is being hosted in [Firebase Hosting](https://pokedex-2-angular.web.app)
+Proyecto elaborado en [Angular CLI](https://github.com/angular/angular-cli) version 19.0.6.
+Este proyect esta siendo hosteado en [Firebase Hosting](https://pokedex-2-angular.web.app)
+
+Realizado por:
+  - Juan Manuel Pérez
+  - Juan David Domínguez
+  - Fernando Rama
+
 
 ## Development server
 
