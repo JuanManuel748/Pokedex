@@ -9,6 +9,9 @@ import { LoginGoogleComponent } from './pages/login-google/login-google.componen
 import { AuthGuard } from './guards/auth.guard';
 import { ErrorPageComponent } from './pages/error/error-page.component';
 import { PartyEditComponent } from './pages/party-edit/party-edit.component';
+import { FavoriteListComponent } from './pages/favorite-list/favorite-list.component';
+import { FavoriteEditComponent } from './pages/favorite-edit/favorite-edit.component';
+import { FavoriteAddComponent } from './pages/favorite-add/favorite-add.component';
 
 export const routes: Routes = [
     { path: '', component: HomeComponent },
@@ -18,6 +21,10 @@ export const routes: Routes = [
     { path: 'parties', component: PartyListComponent},
     { path: 'parties/add', component: PartyListComponent},
     { path: 'parties/edit/:id', component: PartyEditComponent},
+
+    { path: 'favs', component: FavoriteListComponent},
+    { path: 'favs/add', component: FavoriteAddComponent},
+    { path: 'favs/edit/:id', component: FavoriteEditComponent},
 
 
 
