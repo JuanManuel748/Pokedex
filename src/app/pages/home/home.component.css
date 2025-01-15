@@ -73,6 +73,38 @@ main {
       #1c4760 9px
     );
   }
+  .search {
+    display: flex;
+    position: absolute;
+    top: 15%;
+    right: 1%;
+    width: 42%;
+    &.open {
+      margin-left: 50px;
+    }
+    
+    margin-bottom: 1rem;
+    input {
+        border-radius: 8px;
+        padding: 10px;
+        width: 95%;
+        margin-left: -5px;
+        background: #fceab8;
+        border-color: #544827;
+    }
+    input:focus {
+        box-shadow: 0 0 10px rgba(211, 10, 64, 1);
+        outline: none;
+    }
+    button {
+      width: 40px;
+      height: 40px;
+      img {
+      width: 40px;
+      height: 40px;
+      }
+    }
+  }
   
   #cardsContainer {
     display: flex;
@@ -86,5 +118,12 @@ main {
   
   #spinner {
     height: 50px;
+  }
+
+  app-notification {
+    font-size: 50px;
+    color: rgb(171, 0, 0);
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5); 
+
   }
   
