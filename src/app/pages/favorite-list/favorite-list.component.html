@@ -1,9 +1,10 @@
 <div class="container mt-4">
   <div class="content">
     <div class="d-grid gap-2 d-md-block">
-      <a class="btn btn-primary" href="/favs/add" role="button"
-        ><i class="bi bi-plus-lg"></i> Añadir favorito</a
-      >
+      <a class="btn btn-primary nav-link" [routerLink]="['/favs/add']" 
+      routerLinkActive="active" role="button">
+        <i class="bi bi-plus-lg"></i> Añadir favorito
+      </a>
     </div>
     <p></p>
     <table
@@ -39,7 +40,7 @@
                 [routerLink]="['/favs/edit', fav.id]"
                 class="btn btn-danger btn-sm"
               >
-                <i class="bi bi-trash"></i>
+                <i class="bi bi-pencil"></i>
                 <span class="d-none d-md-inline-flex ps-2">Actualizar</span>
               </button>
             </div>
