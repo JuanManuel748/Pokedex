@@ -9,6 +9,16 @@ Realizado por:
   - Fernando Rama
 
 
+## INTRODUCCIÓN
+Este es nuestro proyecto de angular, está basado en la pokédex de la serie y franquicia de videojuegos Pokémon, además tiene una pestaña en la que puedes poner tu nombre, seleccionar tu pokemon favorito y poner el nombre que le pondrías tu.
+
+
+
+
+
+
+
+
 ## Development server
 
 To start a local development server, run:
