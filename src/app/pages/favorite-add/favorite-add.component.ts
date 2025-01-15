@@ -1,4 +1,4 @@
-import { Component, OnChanges, SimpleChanges } from '@angular/core';
+import { Component, OnChanges, OnInit, SimpleChanges } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { FormControl, FormGroup, ReactiveFormsModule } from '@angular/forms';
 import { NotificationComponent } from '../../components/notification/notification.component';
@@ -30,6 +30,7 @@ export class FavoriteAddComponent implements OnChanges {
     this.tempPoke.id = idPoke || '';
     this.getPokemonImageUrl(this.tempPoke.id);
   }
+
 
   updateId() {
     let idElement = document.getElementById('idPoke') as HTMLInputElement;

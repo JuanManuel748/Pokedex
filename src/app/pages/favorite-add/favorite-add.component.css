@@ -1,179 +1,194 @@
-section::before{
-    content: '';
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background: repeating-linear-gradient(
-      0deg,
-      #79a0e3 0px,
-      #79a0e3 10px,
-      #668cd7 10px,
-      #668cd7 50px,
-      #79a0e3 50px,
-      #79a0e3 60px,
-      #5576c5 60px,
-      #5576c5 90px,
-      #79a0e3 90px,
-      #79a0e3 100px,
-      #4c69b8 100px,
-      #4c69b8 140px,
-      #79a0e3 140px,
-      #79a0e3 150px,
-      #4660b4 150px,
-      #4660b4 160px,
-      #79a0e3 160px,
-      #79a0e3 170px,
-      #5576c5 170px,
-      #5576c5 190px
-      );
-      z-index: -1;
-  }
-  
-  section {
-      max-width: 600px;
-      margin: 37px auto 0;
-      padding: 20px;
-      background-color: #f8d7da;
-      border-radius: 8px;
-      box-shadow: 0 0 10px rgba(0, 0, 0, 0.4);
-      position: relative;
-      display: grid;
-      grid-template-areas: "alert alert"
-      "form preview";
-    }
-    .alert {
-      grid-area: alert;
-    }
-    form {
-      grid-area: form;
-    }
-    
-    .title h2 {
-      text-align: center;
-      color: #343a40;
-      font-size: 1.6em; 
-    }
-    
-  .form-group {
-      margin-bottom: 1rem;
-      input{
-          border-radius: 8px;
-          padding: 10px;
-          width: 95%;
-          margin-left: -5px;
-          background: #f8d7da;
-          border-color: #D30A40;
-        }
-        input:focus {
-            box-shadow: 0 0 10px rgba(211, 10, 64, 1);
-            outline: none;
-        }
-  }
-  
-  .form-group label {
-    display: block;
-    margin-bottom: 0.5rem;
-    color: #495057;
-    font-size: 1em;
-  }
-  
-  .form-control {
-    width: 100%;
-    padding: 0.375rem 0.75rem;
-    font-size: 1rem;
-    line-height: 1.5;
-    color: #282b2f;
-    background-color: #fff;
-    background-clip: padding-box;
-    border: 1px solid #ced4da;
-    border-radius: 0.25rem;
-    transition: border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
-  }
-  
-  .form-control:focus {
-    color: #495057;
-    background-color: #fff;
-    border-color: #80bdff;
-    outline: 0;
-    box-shadow: 0 0 0 0.2rem rgba(0, 123, 255, 0.25);
-  }
-  
-  .btn {
-    display: inline-block;
-    font-weight: 400;
-    color: #fff;
-    text-align: center;
-    vertical-align: middle;
-    user-select: none;
-    background-color: #D30A40;
-    border: 1px solid #D30A40;
-    padding: 0.375rem 0.75rem;
-    font-size: 1rem;
-    line-height: 1.5;
-    border-radius: 0.25rem;
-    transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out, border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
-  }
-  
-  .btn:hover {
-    color: #fff;
-    background-color: #a00a30;
-    border-color: #a00a30;
-  }
-  .previewPokemon {
-    grid-area: preview;
-    text-align: center;
-    margin-top: 15%;
-    margin-left: 10%;
-    input {
-      margin-top: 5%;
-      border-radius: 8px;
-      padding: 10px;
-      width: 50%;
-      margin-left: -5px;
-      background: #f8d7da;
-      border-color: #d30a40;
-    }
-    input:focus {
-      box-shadow: 0 0 10px rgba(211, 10, 64, 1);
-      outline: none;
-    }
-  }
-  
-  .previewPokemon #preview {
-    width: 250px;
-    max-width: 100%;
-    height: auto;
-    border: 1px solid #ff8791;
+section::before {
+  content: "";
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: repeating-linear-gradient(
+    0deg,
+    #79a0e3 0px,
+    #79a0e3 10px,
+    #668cd7 10px,
+    #668cd7 50px,
+    #79a0e3 50px,
+    #79a0e3 60px,
+    #5576c5 60px,
+    #5576c5 90px,
+    #79a0e3 90px,
+    #79a0e3 100px,
+    #4c69b8 100px,
+    #4c69b8 140px,
+    #79a0e3 140px,
+    #79a0e3 150px,
+    #4660b4 150px,
+    #4660b4 160px,
+    #79a0e3 160px,
+    #79a0e3 170px,
+    #5576c5 170px,
+    #5576c5 190px
+  );
+  z-index: -1;
+}
+
+section {
+  max-width: 600px;
+  margin: 37px auto 0;
+  padding: 20px;
+  background-color: #f8d7da;
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.4);
+  position: relative;
+  display: grid;
+  grid-template-areas:
+    "alert alert"
+    "form preview";
+}
+.alert {
+  grid-area: alert;
+}
+form {
+  grid-area: form;
+}
+
+.title h2 {
+  text-align: center;
+  color: #343a40;
+  font-size: 1.6em;
+}
+
+.form-group {
+  margin-bottom: 1rem;
+  input {
     border-radius: 8px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+    padding: 10px;
+    width: 95%;
+    margin-left: -5px;
+    background: #f8d7da;
+    border-color: #d30a40;
   }
-  
-  .searchPokemon {
-    display: flex;
-    justify-content: center; /* Centra los elementos horizontalmente */
-    align-items: center; /* Centra los elementos verticalmente */
+  input:focus {
+    box-shadow: 0 0 10px rgba(211, 10, 64, 1);
+    outline: none;
   }
-  
-  .search_button {
-    background-color: transparent;
-    border: transparent;
-    display: flex; /* Asegura que la imagen esté centrada dentro del botón */
-    justify-content: center;
-    align-items: center;
+}
+
+.form-group label {
+  display: block;
+  margin-bottom: 0.5rem;
+  color: #495057;
+  font-size: 1em;
+}
+
+.form-control {
+  width: 100%;
+  padding: 0.375rem 0.75rem;
+  font-size: 1rem;
+  line-height: 1.5;
+  color: #282b2f;
+  background-color: #fff;
+  background-clip: padding-box;
+  border: 1px solid #ced4da;
+  border-radius: 0.25rem;
+  transition: border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
+}
+
+.form-control:focus {
+  color: #495057;
+  background-color: #fff;
+  border-color: #80bdff;
+  outline: 0;
+  box-shadow: 0 0 0 0.2rem rgba(0, 123, 255, 0.25);
+}
+
+.btn {
+  display: inline-block;
+  font-weight: 400;
+  color: #fff;
+  text-align: center;
+  vertical-align: middle;
+  user-select: none;
+  background-color: #d30a40;
+  border: 1px solid #d30a40;
+  padding: 0.375rem 0.75rem;
+  font-size: 1rem;
+  line-height: 1.5;
+  border-radius: 0.25rem;
+  transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out,
+    border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
+}
+
+.btn:hover {
+  color: #fff;
+  background-color: #a00a30;
+  border-color: #a00a30;
+}
+
+.previewPokemon {
+  grid-area: preview;
+  text-align: center;
+  margin-top: 15%;
+  margin-left: 10%;
+  input {
+    margin-top: 5%;
+    border-radius: 8px;
+    padding: 10px;
+    width: 50%;
+    margin-left: -5px;
+    background: #f8d7da;
+    border-color: #d30a40;
   }
-  
-  .search_button:hover {
-    color: #fff;
-    background-color: #a00a30;
-    border-color: #a00a30;
+  input:focus {
+    box-shadow: 0 0 10px rgba(211, 10, 64, 1);
+    outline: none;
   }
-  
-  #search {
-    width: 30px;
-  }
-  
-  .alert {
-    margin-bottom: 1rem;
-  }
+}
+
+.previewPokemon #preview {
+  width: 250px;
+  max-width: 100%;
+  height: auto;
+  image-rendering: pixelated;
+}
+
+.previewContainer{
+  border: 5px solid #8cbbf1;
+  outline: 8px solid #ff8791;
+  aspect-ratio: 1;
+  border-radius: 25px;
+  background: repeating-linear-gradient(
+      to bottom,
+      #f5f7f9,
+      #f5f7f9 15px,
+      #c9e2f4 15px,
+      #c9e2f4 25px
+  );
+}
+
+.searchPokemon {
+  display: flex;
+  justify-content: center; /* Centra los elementos horizontalmente */
+  align-items: center; /* Centra los elementos verticalmente */
+}
+
+.search_button {
+  background-color: transparent;
+  border: transparent;
+  display: flex; /* Asegura que la imagen esté centrada dentro del botón */
+  justify-content: center;
+  align-items: center;
+}
+
+.search_button:hover {
+  color: #fff;
+  background-color: #a00a30;
+  border-color: #a00a30;
+}
+
+#search {
+  width: 30px;
+}
+
+.alert {
+  margin-bottom: 1rem;
+}

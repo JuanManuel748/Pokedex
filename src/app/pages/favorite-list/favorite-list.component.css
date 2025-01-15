@@ -67,6 +67,7 @@ a {
 
 .table img {
   width: 150px;
+  image-rendering: pixelated;
 }
 
 .table thead {
