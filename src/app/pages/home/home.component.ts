@@ -77,18 +77,49 @@ export class HomeComponent implements OnInit {
 
   onSearch(event: any): void {
     this.showAlert = false;
-    const searchTerm = event.target.value.toLowerCase();
-    if (searchTerm != '' || searchTerm != ' ') {
+    const searchTerm = event.target.value.toLowerCase().trim();
+
+    if (searchTerm) {
+      // Busca primero en la lista cargada
       this.filteredPokemonList = this.pokemonList.filter((pokemon) =>
         pokemon.name.toLowerCase().includes(searchTerm)
       );
-      if (this.filteredPokemonList.length == 0) {
-        this.alertMessage = `Error al buscar el pokemon ` + searchTerm;
-        this.alertClass = 'danger';
-        this.showAlert = true;
+
+      if (this.filteredPokemonList.length === 0) {
+        this.showAlert = false;
+        // Si no está en la lista cargada, busca en el servicio
+        this.pokemonService.getById(searchTerm).then(
+          (pokemon) => {
+            if (pokemon) {
+              this.showAlert = false;
+              // Si se encuentra, agrégalo a la lista filtrada
+              this.filteredPokemonList = [
+                {
+                  name: pokemon.name,
+                  url: `https://pokeapi.co/api/v2/pokemon/${pokemon.id}/`,
+                },
+              ];
+              this.showAlert = false;
+            } else {
+              // Si no se encuentra, muestra un mensaje de error
+              this.showError(searchTerm);
+            }
+          },
+          (error) => {
+            // Maneja el error si ocurre al consultar el servicio
+            this.showError(searchTerm);
+          }
+        );
       }
-    } else {  
+    } else {
+      // Si el término de búsqueda está vacío, restablece la lista filtrada
       this.filteredPokemonList = [...this.pokemonList];
     }
+  }
+
+  private showError(searchTerm: string): void {
+    this.alertMessage = `No se encontró el Pokémon "${searchTerm}".`;
+    this.alertClass = 'danger';
+    this.showAlert = true;
   }
 }
