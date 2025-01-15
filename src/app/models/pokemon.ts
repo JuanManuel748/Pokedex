@@ -355,7 +355,7 @@ export interface Pokemon {
 }
 // Define the examplePokemon object outside of the interface definition
 export const examplePokemon: Pokemon = {
-  id: "25",
+  id: "1",
   name: "pikachu",
   base_experience: 112,
   height: 4,

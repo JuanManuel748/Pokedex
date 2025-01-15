@@ -6,10 +6,10 @@
       [alertMessage]="alertMessage"
     />
   </div>
-  <div class="title">
-    <h2 class="">Añadir favorito:</h2>
-  </div>
   <form [formGroup]="favForm" (ngSubmit)="submitFav()">
+    <div class="title">
+      <h2 class="">Añadir favorito:</h2>
+    </div>
     <div class="form-group mb-4">
       <label for="user">Usuario: </label>
       <input
@@ -35,13 +35,27 @@
         id="idPoke"
         formControlName="idPoke"
         type="number"
+        (change)="updateId()"
       />
     </div>
     <div class="d-grid gap-2 d-md-block">
-      <button type="submit" class="btn btn-primary mt-3"><i class="bi bi-plus-lg"></i> Añadir</button>
+      <button type="submit" class="btn btn-primary mt-3">
+        <i class="bi bi-plus-lg"></i> Añadir
+      </button>
     </div>
   </form>
   <div class="previewPokemon">
-    <img [src]="getPokemonImageUrl()" alt="No se ha encontrado el pokemon" />
+    <img
+      [src]="getPokemonImageUrl(tempPoke.id)"
+      alt="No se ha encontrado el pokemon"
+      id="preview"
+    />
+    <br />
+    <div class="searchPokemon">
+      <input type="text" id="search_input" placeholder="Buscar pokemon" />
+      <button (click)="search()" class="search_button">
+        <img src="../../../assets/img/lupa.png" alt="search" id="search" />
+      </button>
+    </div>
   </div>
 </section>
