@@ -6,12 +6,13 @@ import { FavoriteEditComponent } from './pages/favorite-edit/favorite-edit.compo
 import { FavoriteAddComponent } from './pages/favorite-add/favorite-add.component';
 import { HomeComponent } from './pages/home/home.component';
 import { LoginGoogleComponent } from './pages/login-google/login-google.component';
+import { AuthGuard } from './guards/auth.guard';
 
 export const routes: Routes = [
     { path: '', component: HomeComponent },
-    { path: 'login', component: LoginGoogleComponent },
-    { path: 'favs', component: FavoriteListComponent },
-    { path: 'favs/add', component: FavoriteAddComponent },
-    { path: 'favs/edit/:id', component: FavoriteEditComponent },
+    { path: 'login', component: LoginGoogleComponent},
+    { path: 'favs', component: FavoriteListComponent, canActivate: [AuthGuard]},
+    { path: 'favs/add', component: FavoriteAddComponent, canActivate: [AuthGuard]},
+    { path: 'favs/edit/:id', component: FavoriteEditComponent, canActivate: [AuthGuard]},
     { path: '**', component: ErrorPageComponent }
 ];
